@@ -1,0 +1,22 @@
+users:
+    id: true
+    name: string
+    email: string.unique
+    email_verified_at: timestamp.nullable
+    password: string
+    rememberToken: true
+    timestamps: true
+
+password_resets:
+    email: string.index
+    token: string
+    created_at: timestamp.nullable
+
+failed_jobs:
+    id: true
+    uuid: string.unique
+    connection: text
+    queue: text
+    payload: longText
+    exception: longText
+    failed_at: timestamp.useCurrent
